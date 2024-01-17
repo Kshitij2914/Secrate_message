@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 const nodemailer = require('nodemailer')
-
+const port = process.env.PORT;
 const app = express()
 app.use(express.json())
 app.use(cors({
@@ -182,7 +182,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(3001, () => {
+app.listen(port, () => {
     console.log("successfull connected")
 })
 
