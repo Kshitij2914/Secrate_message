@@ -1,0 +1,5 @@
+.box {
+  background-image: url("../chat.jpg");
+  background-attachment: fixed;
+  height: 80vh;
+}

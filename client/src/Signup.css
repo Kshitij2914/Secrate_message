@@ -1,0 +1,15 @@
+#signup{
+    background-image: url('../register.jpg');
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+}
+#innerbox{
+    background-color: rgba(128, 128, 128, 0.795);
+}
+#register{
+    color:aliceblue;
+    background-color: rgba(32, 32, 32, 0.897);
+}
+#link{
+    color: brown;
+}

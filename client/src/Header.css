@@ -1,0 +1,10 @@
+.header{
+    background-color: rgb(57, 84, 141);
+    padding: 10px 10px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+#icon{
+    cursor: pointer;
+}

@@ -1,0 +1,18 @@
+.messageBox{
+    max-width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    clear: both;
+    word-wrap: break-word; 
+}
+.right{
+    float: right;
+    background-color: rgb(118, 170, 219);
+    color: black;
+}
+.left{
+    float: left;
+    background-color: rgb(118, 170, 219);
+    color: black;
+}

@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(57, 84, 141);
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    body{
+        min-width: 375px !important;
+        min-height: 375px !important;
+        grid-area: 1/2/2/4;
+    }
+}

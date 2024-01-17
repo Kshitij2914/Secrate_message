@@ -1,0 +1,25 @@
+
+.component > input{
+    width: 80%;
+    height: 10vh;
+    font-size: x-large;
+    padding: 2px;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    background-color: rgb(57, 84, 141);
+}
+.component > button{
+    width: 20%;
+    height: 1cm;
+    font-size: large;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(17, 24, 85);
+    color: rgb(168, 189, 168);
+    cursor: pointer;
+}
+.component > button:hover{
+    background-color:rgb(34, 42, 116);
+    color: rgb(17, 3, 48);
+}

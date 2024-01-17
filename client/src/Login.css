@@ -1,0 +1,36 @@
+#login{
+    background-image: url("../login.jpg");
+    background-attachment: fixed;
+    
+    background-size:cover;
+
+}
+#innerBox{
+    background-color: rgba(62, 72, 92, 0.733);
+}
+#password{
+    width: 9cm;
+    border: 3px solid rgb(30, 29, 39);
+}
+#email{
+    width: 9cm;
+    border: 3px solid rgb(30, 29, 39);
+}
+h5{
+    color:rgb(253, 253, 255);
+}
+h1{
+    color: rgb(28, 30, 41);
+}
+#button{
+    color:rgb(148, 166, 182) ;
+    background-color: rgba(22, 22, 46, 0.938);
+}
+p{
+    color: rgb(2, 2, 14);
+    font-size: large;
+}
+.link{
+    color: rgb(3, 16, 88);
+    text-decoration:none;
+}
