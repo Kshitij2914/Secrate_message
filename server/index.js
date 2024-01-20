@@ -11,7 +11,7 @@ const nodemailer = require('nodemailer')
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["http://localhost:5173"],
+    origin: [process.env.PORT],
     methods: ["GET", "POST"],
     credentials: true
 }))
@@ -182,6 +182,6 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(3001, () => {
+app.listen(process.env.PORT, () => {
     console.log("successfull connected")
 })
