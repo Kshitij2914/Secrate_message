@@ -11,7 +11,7 @@ function ResetPassword() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        axios.post(`http://localhost:3001/reset_password/${id}/${token}`, { password })
+        axios.post(`https://secrate-message.vercel.app/reset_password/${id}/${token}`, { password })
             .then(result => {
                 if (result.data === "Success") {
                     navigate('/login')
