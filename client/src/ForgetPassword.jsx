@@ -10,7 +10,7 @@ function ForgetPassword() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        axios.post('http://localhost:3001/forget_password', { email })
+        axios.post('https://secrate-message.vercel.app/forget_password', { email })
             .then(result => {
                 if (result.data === "Success") {
                     navigate('/login')
