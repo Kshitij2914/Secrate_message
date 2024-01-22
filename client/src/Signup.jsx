@@ -11,7 +11,7 @@ function Signup() {
     function handleSubmit(e) {
         e.preventDefault();
         if (name && email && password) {
-            axios.post('http://localhost:3001/register', { name, email, password })
+            axios.post('https://secrate-message.vercel.app/register', { name, email, password })
                 .then(result => {
                     console.log(result)
                     navigate('/login')
