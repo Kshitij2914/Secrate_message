@@ -182,6 +182,6 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(3001, () => {
+app.listen("https://secrate-message-frontend.vercel.app", () => {
     console.log("successfull connected")
 })
