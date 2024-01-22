@@ -18,7 +18,7 @@ function Footer({ callData }) {
   function handleSend() {
     setId(localStorage.getItem('id'))
     setName(localStorage.getItem('name'))
-    axios.post('http://localhost:3001/home', { name, id, message })
+    axios.post('https://secrate-message.vercel.app/home', { name, id, message })
       .then(result => {
         if (result.data == "over"){
           alert("over")
