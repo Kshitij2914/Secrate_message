@@ -10,7 +10,7 @@ function Home({callData, data}) {
   axios.defaults.withCredentials = true
 
   useEffect(() => {
-    axios.get('http://localhost:3001/home')
+    axios.get('https://secrate-message.vercel.app/home')
       .then(result => {
         console.log(result)
         callData()
