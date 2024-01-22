@@ -13,7 +13,7 @@ const port = 3001 || process.env.PORT
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["https://secrate-message.vercel.app/"],
+    origin: ["https://secrate-message-frontend.vercel.app/"],
     methods: ["GET", "POST"],
     credentials: true
 }))
