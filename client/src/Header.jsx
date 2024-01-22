@@ -8,7 +8,7 @@ function Header() {
   
   const navigate = useNavigate()
   function logout() {
-    axios.get('http://localhost:3001/logout')
+    axios.get('https://secrate-message.vercel.app/logout')
       .then(result => {
         navigate('/Login')
         console.log(result)
