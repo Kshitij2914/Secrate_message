@@ -11,7 +11,7 @@ function Signup() {
     axios.defaults.withCredentials = true
     function handleSubmit(e) {
         e.preventDefault();
-        axios.post('http://localhost:3001/login', { email, password })
+        axios.post('https://secrate-message.vercel.app/login', { email, password })
             .then(result => {
                 if (result.data[0] === "Success") {
                     //localstorage because sometime cookies are denied 
