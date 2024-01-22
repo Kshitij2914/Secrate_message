@@ -13,7 +13,7 @@ function App() {
   const [data, setData] = useState([])
   function callData()
   {
-    axios.get('http://localhost:3001/')
+    axios.get('https://secrate-message.vercel.app/')
       .then(result => {
         setData(result.data)
       })
