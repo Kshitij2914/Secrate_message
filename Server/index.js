@@ -23,7 +23,7 @@ const server = http.createServer(app);
 mongoose.connect("mongodb+srv://spider:291429@cluster0.jmcn8se.mongodb.net/user?retryWrites=true&w=majority")
 
 //REGISTER
-server.post('/register', (req, res) => {
+app.post('/register', (req, res) => {
     const { name, email, password } = req.body;
     bcrypt.hash(password, 10)
         .then(hash => {
@@ -35,7 +35,7 @@ server.post('/register', (req, res) => {
 })
 
 //LOGIN
-server.post("/login", (req, res) => {
+app.post("/login", (req, res) => {
     const { email, password } = req.body;
     UserModel.findOne({ email: email })
         .then(user => {
@@ -79,7 +79,7 @@ const verifyUser = (req, res, next) => {
     }
 }
 
-server.get('/home', verifyUser, (req, res) => {
+app.get('/home', verifyUser, (req, res) => {
     return res.json("Success")
 })
 
@@ -96,7 +96,7 @@ app.get('/logout', verifyUser, (req, res) => {
 
 //forget password
 
-server.post('/forget_password', (req, res) => {
+app.post('/forget_password', (req, res) => {
     const { email } = req.body
     UserModel.findOne({ email: email })
         .then(user => {
@@ -137,7 +137,7 @@ server.post('/forget_password', (req, res) => {
 })
 
 //reset password
-server.post('/reset_password/:id/:token', (req, res) => {
+app.post('/reset_password/:id/:token', (req, res) => {
     const { id, token } = req.params;
     const { password } = req.body;
 
@@ -158,7 +158,7 @@ server.post('/reset_password/:id/:token', (req, res) => {
 })
 
 //chat to database
-server.post('/home', (req, res) => {
+app.post('/home', (req, res) => {
     const { name, id, message } = req.body;
     UserModel.findByIdAndUpdate({_id:id})
         .then(result => {
@@ -178,13 +178,13 @@ server.post('/home', (req, res) => {
         .catch(err => res.json(err))
 })
 
-server.get('/', (req, res) => {
+app.get('/', (req, res) => {
     ChatModel.find()
         .then(data => res.json(data))
         .catch(err => res.json(err))
 })
 
 
-server.listen("https://secrate-message-frontend.vercel.app", () => {
+app.listen("https://secrate-message-frontend.vercel.app", () => {
     console.log("successfull connected")
 })
