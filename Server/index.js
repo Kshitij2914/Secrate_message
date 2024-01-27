@@ -1,3 +1,4 @@
+const http = require("http");
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
@@ -16,6 +17,8 @@ app.use(cors({
     credentials: true
 }))
 app.use(cookieParser())
+
+const server = http.createServer(app);
 
 mongoose.connect("mongodb+srv://spider:291429@cluster0.jmcn8se.mongodb.net/user?retryWrites=true&w=majority")
 
@@ -182,6 +185,6 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen("https://secrate-message-frontend.vercel.app", () => {
+server.listen("https://secrate-message-frontend.vercel.app", () => {
     console.log("successfull connected")
 })
