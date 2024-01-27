@@ -111,7 +111,7 @@ app.post('/forget_password', (req, res) => {
                     from: 'kshitijsharma479@gmail.com',
                     to: email,
                     subject: 'Reset your password',
-                    text: `http://localhost:5173/reset_password/${user._id}/${token}`
+                    text: `https://secrate-message-frontend.vercel.app/reset_password/${user._id}/${token}`
                 };
 
                 transporter.sendMail(mailOptions, function (error, info) {
